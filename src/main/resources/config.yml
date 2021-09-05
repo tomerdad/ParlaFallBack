@@ -1,0 +1,31 @@
+# ParlaFallBack
+Command:
+  enable: true
+  #another options to /hub
+  aliases:
+    - 'lobby'
+  #mode: random/order
+  mode: random
+  servers:
+    - lobby
+    - minigames
+
+#on reset or close
+FallBack:
+  enable: true
+  #mode: random/order
+  mode: random
+  servers:
+    - lobby
+    - minigames
+  #Under working
+  except:
+    - 'kick'
+    - 'ban'
+
+
+messages:
+  movedToAnotherServer: '&2[Success]%player% teleport to %server%'
+  alreadyInHub: '&1[Error] You are already in hub'
+  randomError: '&1[error] There was an error while trying to connect you into a server'
+  noPermission: ''
